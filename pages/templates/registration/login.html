@@ -1,0 +1,68 @@
+3<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+	<title>Librería El gran Poeta</title>
+	<style>
+		.login {
+				width: 400px;
+				padding: 1.9rem 1.2rem;
+				text-align: center;
+				background: #46b3b3;
+				margin: auto;
+				
+		}
+
+		footer {
+				position: relative;
+				top: 69px;
+				margin: auto;
+				padding: 10px 20px;
+				box-sizing: border-box;
+				margin-top: 79px;
+				width: 100%;
+				border-radius: 7px;
+				
+		}
+
+		.bg-custom {
+            background-color: grey;
+        }
+		/*boton acceso*/
+		.btn {
+			padding: 0.9em 1.6em; border: none; outline: none; color: #FFF; font-family: inherit; font-weight: 500; font-size: 17px; cursor: pointer; position: relative; z-index: 0; border-radius: 12px;} .btn::after {content: ""; z-index: -1; position: absolute; width: 100%; height: 100%; background-color: rgba(215, 174, 25, 0.949); left: 0;top: 0;border-radius: 10px;}/* glow */.btn::before {content: "";background: linear-gradient(45deg,#FF0000, #002BFF, #FF00C8, #002BFF,#FF0000, #002BFF, #FF00C8, #002BFF);position: absolute;top: -2px;left: -2px;background-size: 600%;z-index: -1;width: calc(100% + 4px);height: calc(100% + 4px);filter: blur(8px);animation: glowing 20s linear infinite;transition: opacity .3s ease-in-out;border-radius: 10px;opacity: 0;}@keyframes glowing {0% { background-position: 0 0;}50% {background-position: 400% 0;}100% {background-position: 0 0;}}/* hover */.btn:hover::before {opacity: 1;}.btn:active:after {background: transparent;}.btn:active {color: rgba(11, 11, 11, 0.668);font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+
+                <div class="card">
+                    <div class="card-body"> 
+                        <h2>Ingresa tus credenciales</h2>
+                         <hr>
+                        <form action="" method="post">
+
+                            {% csrf_token %}}
+                            {{ form }}
+
+                            <input type="submit" value="ingresar">
+                        </form>
+                    </div>
+                </div>
+         </div>
+        </div>
+    </div>
+
+
+

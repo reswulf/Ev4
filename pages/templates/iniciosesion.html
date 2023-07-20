@@ -1,0 +1,166 @@
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+	<title>Librería El gran Poeta</title>
+	<style>
+		.login {
+				width: 400px;
+				padding: 1.9rem 1.2rem;
+				text-align: center;
+				background: #46b3b3;
+				margin: auto;
+				
+		}
+
+		footer {
+				position: relative;
+				top: 69px;
+				margin: auto;
+				padding: 10px 20px;
+				box-sizing: border-box;
+				margin-top: 79px;
+				width: 100%;
+				border-radius: 7px;
+				
+		}
+
+		.bg-custom {
+            background-color: grey;
+        }
+		/*boton acceso*/
+		.btn {
+			padding: 0.9em 1.6em; border: none; outline: none; color: #FFF; font-family: inherit; font-weight: 500; font-size: 17px; cursor: pointer; position: relative; z-index: 0; border-radius: 12px;} .btn::after {content: ""; z-index: -1; position: absolute; width: 100%; height: 100%; background-color: rgba(215, 174, 25, 0.949); left: 0;top: 0;border-radius: 10px;}/* glow */.btn::before {content: "";background: linear-gradient(45deg,#FF0000, #002BFF, #FF00C8, #002BFF,#FF0000, #002BFF, #FF00C8, #002BFF);position: absolute;top: -2px;left: -2px;background-size: 600%;z-index: -1;width: calc(100% + 4px);height: calc(100% + 4px);filter: blur(8px);animation: glowing 20s linear infinite;transition: opacity .3s ease-in-out;border-radius: 10px;opacity: 0;}@keyframes glowing {0% { background-position: 0 0;}50% {background-position: 400% 0;}100% {background-position: 0 0;}}/* hover */.btn:hover::before {opacity: 1;}.btn:active:after {background: transparent;}.btn:active {color: rgba(11, 11, 11, 0.668);font-weight: bold;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container-fullwidth mb-3">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="{% url 'home' %}">
+							<img src="https://logodix.com/logo/481237.png"
+								alt="" width="30" height="24">
+						</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'sobrenosotros' %}">Sobre Nosotros</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'mision' %}">Mision y Vision</a>
+								</li>
+							</ul>
+						</div>
+						<a href="{% url 'iniciosesion' %}" class="btn-floating btn-sm text-white">
+							<button class="btn">Acceso</button><!--boton acceso-->
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!--inicio de sesión-->
+
+	<div class="login card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4 p-4">
+
+		<h1 class="text-center">Iniciar Sesion</h1>
+		
+		<form class="needs-validation">
+			<div class="form-group was-validated">
+				<label class="form-label" for="usuario">Usuario</label>
+				<input class="form-control" type="usuario" id="usuario" required>
+				<div class="invalid-feedback">
+					Por favor ingrese su usuario
+				</div>
+			</div>
+			<div class="form-group was-validated">
+				<label class="form-label" for="contraseña">Contraseña</label>
+				<input class="form-control" type="contraseña" id="contraseña" required>
+				<div class="invalid-feedback">
+					Por favor ingrese su contraseña
+				</div>
+			</div>
+			<div class="form-group form-check">
+				<input class="form-check-input" type="checkbox" id="check">
+				<label class="form-check-label" for="check">Recordarme</label>
+			</div>
+
+<!--boton pruebas-->
+<br>
+			
+                <a class="nav-link" href="{% url 'mantenedor' %}">
+					<button type="button" class="btn btn-primary btn-sm">Ingresar</button>
+				</a>
+			
+	</form>
+	</div>
+<!--Inicio de footer-->
+	<footer class="bg-custom text-white pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-center text-md-left">
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Librería Gran Poeta</h5>
+					<p>Página de administración de stock en base a inventario en Librería Gran Poeta</p>
+				</div>
+
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacto</h5>
+					<p>
+						Ubicación: La tortuga 2848
+					</p>
+					<p>
+						Correo: Gran.poeta.libreria@gmail.com
+					</p>
+					<p>
+						Numero: +56 9349 3949
+					</p>
+				</div>
+
+				<hr class="mb-4">
+
+				<div class="row align-items-center">
+					<div class="col-md-7 col-lg-8">
+						<p>
+							Copyright ©2022 Todos los derechos reservados por:
+							<a href="#" style="text-decoration: none;">
+								<strong class="text-warning">Librería Gran poeta</strong>
+							</a>
+						</p>
+
+					</div>
+					<div class="col-md-5 col-lg-4">
+						<div class="text-center text-md-right">
+							<ul class="list-unstyled list-inline">
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+{% endblock content %}
